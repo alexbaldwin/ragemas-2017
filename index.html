@@ -4,12 +4,17 @@ layout: default
 
 <div class="col-12 js-sticky fixed bg-black white">
   <div class="container mx-auto z4">
-    <div class="px2 py1 flex flex-center js-sticky-shadow">
+    <div class="px2 py1 md-flex flex-center js-sticky-shadow">
       <div class="flex-auto">
         <h4 class="md-show m0">{{ site.title }}</h4>
         <h4 class="md-hide m0">Ragemas 2017</h4>
       </div>
       <div class="flex-none">
+        <a href="{{ site.facebook_url }}" class="picatic-widget-button btn btn-primary btn-fb inline-block h4 mr2 sans" style="margin-bottom:0;">
+
+          <img src="{{ "/img/facebook.svg" | relative_url }}" class="mr1">
+          RSVP
+        </a>
         <a href="{{ site.ticket_url }}" class="picatic-widget-button btn btn-primary inline-block h4 sans" style="margin-bottom:0;">BUY TICKETS</a>
       </div>
     </div>
@@ -24,7 +29,7 @@ layout: default
       <h1 class="mt0 mb1 hide">
         Ragemas presents Black Tie Black Dress Vol. II
       </h1>
-      <img class="col-12" src={{ "/img/blacktieblackdress2_@2x.png" | relative_url }} style="max-width: 440px;" />
+      <img class="col-12" src="{{ "/img/blacktieblackdress2_@2x.png" | relative_url }}" style="max-width: 440px;" />
     </div>
       <div class="flex-auto"></div>
   </div>
@@ -47,7 +52,14 @@ layout: default
         Regular Price: $99+
       </p>
       <p class="mt4 mb2">
-        <a href="{{ site.ticket_url }}" class="picatic-widget-button btn btn-primary inline-block h4">BUY TICKETS</a>
+        <a href="{{ site.ticket_url }}" class="picatic-widget-button btn btn-primary col-12 block h4">BUY TICKETS</a>
+      </p>
+      <p class="mb2">
+        <a href="{{ site.facebook_url }}" class="picatic-widget-button btn btn-primary btn-fb col-12 block h4 sans" style="margin-bottom:0;">
+
+          <img src="{{ "/img/facebook.svg" | relative_url }}" class="mr1">
+          RSVP
+        </a>
       </p>
     </div>
     <div class="col col-12 md-col-5 px2">
@@ -89,7 +101,7 @@ layout: default
 </section>
 
 <section class="bg-white relative py4">
-  <img class="absolute" src={{ "/img/accent-image.jpg" | relative_url }} style="z-index: 0; top: 10rem; left: -40%;" />
+  <img class="absolute" src="{{ "/img/accent-image.jpg" | relative_url }}" style="z-index: 0; top: 10rem; left: -40%;" />
   <div class="container relative z1 prose-right">
     {% capture interview %}{% include interview.md %}{% endcapture %}
     {{ interview | markdownify }}
@@ -148,6 +160,10 @@ layout: default
       {% endunless %}
     {% endfor %}
     </p>
+
+    <hr />
+    <h4>Sponsored by</h4>
+    <img src="{{ "/img/sapporo.svg" | relative_url }}">
 
     <footer>
       <p class="mt3 mono">WEBSITE BUILT BY ALEX BALDWIN AND THE RAGEMAS CREW</p>

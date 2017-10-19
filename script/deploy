@@ -4,4 +4,4 @@
 bundle exec jekyll build
 
 # Upload to server
-scp -r _site/* ragemas@ragemas.com:test/
+scp -r _site/* ragemas@ragemas.com:ragemas.com/
